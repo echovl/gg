@@ -1,6 +1,5 @@
 ---
 import Base from "~/layouts/Base.astro";
-
 const item_files = await Astro.glob(`../../public/imgs/items/*`)
 const painting_files = await Astro.glob(`../../public/imgs/paintings/*`)
 
@@ -12,6 +11,9 @@ const paintings = painting_files.map(file => {
     return file.default.split('/').pop().split('.')[0]
 });
 ---
+<script>
+    console.log("hello")
+</script>
 
 <Base>
 <div class="flex flex-col justify-center w-full sm:w-[90%] md:w-[80%] lg:w-[70%] mx-auto gap-5 py-5 px-2 markdown">
